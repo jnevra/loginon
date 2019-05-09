@@ -1,0 +1,31 @@
+<div class="col-md-6 col-md-offset-3">
+  <% if user_signed_in? %>
+  <%= link_to "Buat Diskusi", new_forum_thread_path, class:"btn btn-primary" %>
+  <% end %>
+
+  <% @threads.each do |t| %>
+  <div class="thread">
+    <h4 style = "color:cadetblue;">
+    <%= link_to t.title.titleize, forum_thread_path(t) %>
+    <% if t.sticky? %>
+    <span class= 'glyphicon glyphicon-pushpin'></span>
+    <% end %>
+  </h4>
+
+    <div class="meta">
+    <%= t.created_at.strftime("%d %b %Y") %>   oleh <%= t.user.name.titleize %>
+
+
+      <div class="content">
+      <%= t.content.capitalize %>
+      </div>
+
+    </div>
+    <div class="count">
+      <%= t.forum_posts.count %> obrolan
+
+    </div>
+  </div>
+<% end %>
+</div>
+</div>

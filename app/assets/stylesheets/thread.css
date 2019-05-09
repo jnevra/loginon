@@ -1,0 +1,25 @@
+.meta {
+    margin-bottom: 10px;
+    text-align: left;
+}
+.content {
+    margin-bottom: 10px;
+    text-align: justify;
+}
+.count {
+    margin-bottom: 15px;
+    text-align: right;
+    border-bottom: 1px solid #000000
+
+}
+.thread {
+    margin-bottom: 15px;
+    text-align:center;
+
+
+}
+h4 {
+    font-size: 18px;
+    text-align: left;
+color: cadetblue;
+}
