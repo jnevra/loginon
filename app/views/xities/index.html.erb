@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Xities</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>City name</th>
+      <th>Country</th>
+      <th>Product name</th>
+      <th>Bphone</th>
+      <th>Description</th>
+      <th>Alamat</th>
+      <th>User</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @xities.each do |xity| %>
+      <tr>
+        <td><%= xity.city_name %></td>
+        <td><%= xity.country_id %></td>
+        <td><%= xity.product_name %></td>
+        <td><%= xity.bphone %></td>
+        <td><%= xity.description %></td>
+        <td><%= xity.alamat %></td>
+        <td><%= xity.user_id %></td>
+        <td><%= link_to 'Show', xity %></td>
+        <td><%= link_to 'Edit', edit_xity_path(xity) %></td>
+        <td><%= link_to 'Destroy', xity, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Xity', new_xity_path %>

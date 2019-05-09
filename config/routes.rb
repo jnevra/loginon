@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  resources :xities
+  resources :cities
+  resources :countries
   devise_for :users
   # For details on the rDSL available within this file, see http://guides.rubyonrails.org/routing.html
 root "forum_threads#index"

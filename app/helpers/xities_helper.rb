@@ -1,0 +1,2 @@
+module XitiesHelper
+end

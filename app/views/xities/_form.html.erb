@@ -1,0 +1,52 @@
+<%= form_with(model: xity, local: true) do |form| %>
+  <% if xity.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(xity.errors.count, "error") %> prohibited this xity from being saved:</h2>
+
+      <ul>
+      <% xity.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :city_name %>
+    <%= form.text_field :city_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country_id %>
+    <%= form.number_field :country_id %>
+  </div>
+
+  <div class="field">
+    <%= form.label :product_name %>
+    <%= form.text_field :product_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :bphone %>
+    <%= form.number_field :bphone %>
+  </div>
+
+  <div class="field">
+    <%= form.label :description %>
+    <%= form.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= form.label :alamat %>
+    <%= form.text_area :alamat %>
+  </div>
+
+  <div class="field">
+    <%= form.label :user_id %>
+    <%= form.number_field :user_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

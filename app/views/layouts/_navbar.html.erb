@@ -27,6 +27,8 @@
       <ul class="dropdown-menu">
         <% if user_signed_in? %>
         <li role="separator" class="divider"></li>
+        <li><%= link_to "Category", countries_path %></li>
+        <li><%= link_to "Add Your Business", cities_path %></li>
         <li><%= link_to 'Logout', destroy_user_session_path, method: :delete %></li>
         <% else %>
         <li> <%= link_to 'Registration', new_user_registration_path %> </li>
