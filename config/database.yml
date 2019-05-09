@@ -48,7 +48,5 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
+  adapter: postgresql
   database: forum2_production
-  username: forum2
-  password: <%= ENV['FORUM2_DATABASE_PASSWORD'] %>
